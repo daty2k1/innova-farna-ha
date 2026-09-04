@@ -35,7 +35,7 @@ GRPC_TIMEOUT = 15
 
 
 class InnovaError(Exception):
-    """Base error for the DiffusApp client."""
+    """Base error for the Innova client."""
 
 
 class InnovaAuthError(InnovaError):
@@ -43,7 +43,7 @@ class InnovaAuthError(InnovaError):
 
 
 class InnovaDeviceOffline(InnovaError):
-    """The device is not currently reachable through the DiffusApp cloud."""
+    """The device is not currently reachable through the Innova cloud."""
 
 
 # --- protobuf wire-format encode helpers (build requests by hand) -----------
