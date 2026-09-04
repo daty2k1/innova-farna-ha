@@ -26,16 +26,16 @@ import grpc
 
 _LOGGER = logging.getLogger(__name__)
 
-REST_BASE = "https://v2.api.innova.solutiontech.tech/app"
-GRPC_TARGET = "v2.grpc.innova.solutiontech.tech:443"
-USER_AGENT = "Innova/3.0.0 (Android 13)"
+REST_BASE = "https://v2.api.diffusapp.solutiontech.tech/app"
+GRPC_TARGET = "v2.grpc.diffusapp.solutiontech.tech:443"
+USER_AGENT = "DiffusApp/3.0.1 (Android 13)"
 SEND_DEVICE_METHOD = "/services.app.AppService/SendDevice"
 REST_TIMEOUT = aiohttp.ClientTimeout(total=15)
 GRPC_TIMEOUT = 15
 
 
 class InnovaError(Exception):
-    """Base error for the Innova client."""
+    """Base error for the DiffusApp client."""
 
 
 class InnovaAuthError(InnovaError):
@@ -43,7 +43,7 @@ class InnovaAuthError(InnovaError):
 
 
 class InnovaDeviceOffline(InnovaError):
-    """The device is not currently reachable through the Innova cloud."""
+    """The device is not currently reachable through the DiffusApp cloud."""
 
 
 # --- protobuf wire-format encode helpers (build requests by hand) -----------
